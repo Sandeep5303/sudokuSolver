@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUDOKU SOLVER</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="headerH1">Sudoku Solver</h1>
+    </header>
+    <main>
+      <section class="sudoku">
+        <div class="box">
+          <div class="row--0">
+            <input type="number" class="box--00 bold" />
+            <input type="number" class="box--01 bold" />
+            <input type="number" class="box--02" />
+            <input type="number" class="box--03 bold" />
+            <input type="number" class="box--04 bold" />
+            <input type="number" class="box--05" />
+            <input type="number" class="box--06 bold" />
+            <input type="number" class="box--07 bold" />
+            <input type="number" class="box--08 bold" />
+          </div>
+          <div class="row--1">
+            <input type="number" class="box--10 bold" />
+            <input type="number" class="box--11 bold" />
+            <input type="number" class="box--12" />
+            <input type="number" class="box--13 bold" />
+            <input type="number" class="box--14 bold" />
+            <input type="number" class="box--15" />
+            <input type="number" class="box--16 bold" />
+            <input type="number" class="box--17 bold" />
+            <input type="number" class="box--18 bold" />
+          </div>
+          <div class="row--2 rbold">
+            <input type="number" class="box--20 bold" />
+            <input type="number" class="box--21 bold" />
+            <input type="number" class="box--22" />
+            <input type="number" class="box--23 bold" />
+            <input type="number" class="box--24 bold" />
+            <input type="number" class="box--25" />
+            <input type="number" class="box--26 bold" />
+            <input type="number" class="box--27 bold" />
+            <input type="number" class="box--28 bold" />
+          </div>
+          <div class="row--3">
+            <input type="number" class="box--30 bold" />
+            <input type="number" class="box--31 bold" />
+            <input type="number" class="box--32" />
+            <input type="number" class="box--33 bold" />
+            <input type="number" class="box--34 bold" />
+            <input type="number" class="box--35" />
+            <input type="number" class="box--36 bold" />
+            <input type="number" class="box--37 bold" />
+            <input type="number" class="box--38 bold" />
+          </div>
+          <div class="row--4">
+            <input type="number" class="box--40 bold" />
+            <input type="number" class="box--41 bold" />
+            <input type="number" class="box--42" />
+            <input type="number" class="box--43 bold" />
+            <input type="number" class="box--44 bold" />
+            <input type="number" class="box--45" />
+            <input type="number" class="box--46 bold" />
+            <input type="number" class="box--47 bold" />
+            <input type="number" class="box--48 bold" />
+          </div>
+          <div class="row--5 rbold">
+            <input type="number" class="box--50 bold" />
+            <input type="number" class="box--51 bold" />
+            <input type="number" class="box--52" />
+            <input type="number" class="box--53 bold" />
+            <input type="number" class="box--54 bold" />
+            <input type="number" class="box--55" />
+            <input type="number" class="box--56 bold" />
+            <input type="number" class="box--57 bold" />
+            <input type="number" class="box--58 bold" />
+          </div>
+          <div class="row--6">
+            <input type="number" class="box--60 bold" />
+            <input type="number" class="box--61 bold" />
+            <input type="number" class="box--62" />
+            <input type="number" class="box--63 bold" />
+            <input type="number" class="box--64 bold" />
+            <input type="number" class="box--65" />
+            <input type="number" class="box--66 bold" />
+            <input type="number" class="box--67 bold" />
+            <input type="number" class="box--68 bold" />
+          </div>
+          <div class="row--7">
+            <input type="number" class="box--70 bold" />
+            <input type="number" class="box--71 bold" />
+            <input type="number" class="box--72" />
+            <input type="number" class="box--73 bold" />
+            <input type="number" class="box--74 bold" />
+            <input type="number" class="box--75" />
+            <input type="number" class="box--76 bold" />
+            <input type="number" class="box--77 bold" />
+            <input type="number" class="box--78 bold" />
+          </div>
+          <div class="row--8">
+            <input type="number" class="box--80 bold" />
+            <input type="number" class="box--81 bold" />
+            <input type="number" class="box--82" />
+            <input type="number" class="box--83 bold" />
+            <input type="number" class="box--84 bold" />
+            <input type="number" class="box--85" />
+            <input type="number" class="box--86 bold" />
+            <input type="number" class="box--87 bold" />
+            <input type="number" class="box--88 bold" />
+          </div>
+        </div>
+        <button class="btn btn--solve"><span>Solve</span></button>
+        <button class="btn btn--reset"><span>Reset</span></button>
+        <div class="btnThemes">
+          <button class="btn btn--theme00 btnTheme">Theme 1</button>
+          <button class="btn btn--theme01 btnTheme">Theme 2</button>
+          <button class="btn btn--theme02 btnTheme">Default</button>
+        </div>
+      </section>
+    </main>
+    <div class="modal">
+      <button class="btn--close">x</button>
+      <h1 class="modalH1">Hi</h1>
+      <p>
+        Welcome to Sudoku Solver!!!! It is a simple project which uses recursion
+        and backtracking to solve sudoku game. Just type in the numbers in the
+        respected box and press the solve button.
+      </p>
+    </div>
+    <div class="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!-- 💡🔄 -->

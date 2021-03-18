@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+.modalH1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('themes/bg.jpg');
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #eee;
+  /* background-image: linear-gradient(to top left #753682 0%#bf2e34 100%); */
+  background-color: rgb(39, 39, 39);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  position: absolute;
+  height: 96vh;
+}
+.headerH1 {
+  color: aliceblue;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+}
+p {
+  font-size: 1.8rem;
+  color: #333;
+}
+main {
+  position: relative;
+  width: 85rem;
+  height: 65rem;
+  background-color: rgba(27, 27, 27, 0.35);
+  backdrop-filter: blur(200px);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(255, 0, 0, 0.25);
+  border-radius: 9px;
+  overflow: hidden;
+  display: flex;
+}
+.sudoku {
+  flex: 50%;
+  padding: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+input {
+  width: 60px;
+  height: 60px;
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* buttons */
+.btn--solve {
+  right: 15%;
+  top: 2.5%;
+}
+.btn--reset {
+  left: 15%;
+  bottom: 4.2%;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.btn--solve span:after {
+  content: '💡';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.btn--reset span:after {
+  content: '🔄';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.btn--solve:hover span {
+  padding-right: 25px;
+}
+.btn--reset:hover span {
+  padding-right: 25px;
+}
+.btn--solve:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.btn--reset:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.btn {
+  position: relative;
+  color: #444;
+  background: none;
+  font-family: inherit;
+  border: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  background-color: white;
+  /* background-color: rgba(255, 255, 255, 0.6)*/
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgb(0 0 0 / 10%);
+  transition: all 0.5s;
+}
+.btn:active {
+  transform: translate(0%, 2px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--close {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-weight: 400;
+}
+.btn--theme00,
+.btn--theme01,
+.btn--theme02 {
+  display: block;
+  bottom: 41rem;
+  left: 34.9rem;
+  border: 2px solid #333;
+}
+
+/* modal and overylay hidden */
+.hidden {
+  display: none;
+}
+
+/* row margins and column margins for proper sudoku format style */
+.rbold {
+  margin-bottom: 2px;
+  /* border-bottom: 4px solid #eee; */
+}
+.bold {
+  margin-right: -3px;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 30%);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
