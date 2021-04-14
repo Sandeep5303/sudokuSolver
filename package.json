@@ -1,0 +1,23 @@
+{
+  "name": "sudokusolver",
+  "version": "1.0.0",
+  "description": "Classic 9x9 Sudoku Solver",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel sudoku.html",
+    "build": "parcel build sudoku.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sandeep5303/sudokuSolver.git"
+  },
+  "author": "Sandeep Pradhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sandeep5303/sudokuSolver/issues"
+  },
+  "homepage": "https://github.com/Sandeep5303/sudokuSolver#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}
