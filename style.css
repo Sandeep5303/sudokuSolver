@@ -14,7 +14,7 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-image: url('themes/bg.jpg');
+  background-image: url('bg.jpg');
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   height: 100vh;

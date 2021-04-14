@@ -193,7 +193,7 @@ const header = document.querySelector('.headerH1');
 
 //theme1
 theme1.addEventListener('click', function () {
-  body.style.backgroundImage = `url('themes/bg2.jpg')`;
+  body.style.backgroundImage = `url('bg2.jpg')`;
   main.style.backgroundColor = 'rgba(27, 27, 27, 0.89)';
   header.style['-webkit-text-stroke'] = '0.1mm black';
   main.style.boxShadow = '0 3rem 5rem rgba(0, 0, 0, 0.637)';
@@ -208,7 +208,7 @@ theme2.addEventListener('click', function () {
 });
 //theme default
 themeDefault.addEventListener('click', function () {
-  body.style.backgroundImage = `url('themes/bg.jpg')`;
+  body.style.backgroundImage = `url('bg.jpg')`;
   main.style.backgroundColor = 'rgba(27, 27, 27, 0.35)';
   header.style['-webkit-text-stroke'] = '';
   main.style.boxShadow = '0 3rem 5rem rgba(255, 0, 0, 0.25)';

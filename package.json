@@ -2,10 +2,11 @@
   "name": "sudokusolver",
   "version": "1.0.0",
   "description": "Classic 9x9 Sudoku Solver",
+  "default": "sudoku.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel sudoku.html",
-    "build": "parcel build sudoku.html"
+    "build": "parcel build sudoku.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",
